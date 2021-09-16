@@ -12,8 +12,8 @@ const fibonacci = (num, memo) => {
   return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
 }
 
-let fibonacci = function (n) {
-  const memo = [0, 1];
+const fibonacci = function (n) {
+  let memo = [0, 1];
   const aux = (n) => {
     if (memo[n] !== undefined) return memo[n];
     memo[n] = aux(n - 1) + aux(n - 2);
