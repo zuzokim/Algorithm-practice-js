@@ -15,6 +15,17 @@ const fibonacci = (num, memo) => {
 const fibonacci = function (n) {
   let memo = [0, 1];
   const aux = (n) => {
+    if(n < 2) return n;
+    if (memo[n]) return memo[n];
+    memo[n] = aux(n - 1) + aux(n - 2);
+    return memo[n];
+  };
+  return aux(n);
+};
+
+const fibonacci = function (n) {
+  let memo = [0, 1];
+  const aux = (n) => {
     if (memo[n] !== undefined) return memo[n];
     memo[n] = aux(n - 1) + aux(n - 2);
     return memo[n];
