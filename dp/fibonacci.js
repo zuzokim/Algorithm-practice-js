@@ -5,35 +5,22 @@
 // }
 
 // dp solution with meoization: O(N)
-//o
-const fibonacci = (num) => {
-  let memo = {};
+const fibonacci = (num, memo) => {
+  memo = memo || {};
   if(num < 2) return num;
   if(memo[num]) return memo[num];
-  return memo[num] = fibonacci(num - 1) + fibonacci(num - 2);
+  return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
 }
 
-//o
-const fibonacci = (num) => {
-  let memo = {0:0, 1:1};
-  if(memo[num] !== undefined) return memo[num];
-  return memo[num] = fibonacci(num - 1) + fibonacci(num - 2);
-}
-
-//o
-const fibonacci = (num) => {
-  let memo = [0,1];
-  if(num < 2) return num;
-  if(memo[num]) return memo[num];
-  return memo[num] = fibonacci(num - 1) + fibonacci(num - 2);
-}
-
-//o
-const fibonacci = (num) => {
-  let memo = [0,1];
-  if(memo[num] !== undefined) return memo[num];
-  return memo[num] = fibonacci(num - 1) + fibonacci(num - 2);
-}
+let fibonacci = function (n) {
+  const memo = [0, 1];
+  const aux = (n) => {
+    if (memo[n] !== undefined) return memo[n];
+    memo[n] = aux(n - 1) + aux(n - 2);
+    return memo[n];
+  };
+  return aux(n);
+};
 
 
 let output = fibonacci(0);
