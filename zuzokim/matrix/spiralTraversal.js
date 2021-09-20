@@ -55,6 +55,8 @@ const spiralTraversal = (matrix) => {
   return result
 }
 
+//시간복잡도 : O(n^2)
+
 console.log(spiralTraversal([
   [1,2,3],
   [8,9,4],
