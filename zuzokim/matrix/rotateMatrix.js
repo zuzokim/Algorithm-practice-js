@@ -45,4 +45,4 @@ console.log(rotatedMatrix[0][0]); // --> 13
 console.log(rotatedMatrix[3][2]); // --> 8
 
 console.log(rotateMatrix(matrix)); 
-console.log(rotateMatrix(matrix2)); 
+console.log(rotateMatrix(matrix2));
