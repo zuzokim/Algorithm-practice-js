@@ -16,9 +16,9 @@ const insertionSort = function (arr) {
 
 // 1. 인자로 들어온 배열을 순회한다.
 // 2. arr[i]를 temp에 임시로 저장한다.
-// 3. 이중 반복문을 실행한다. j는 i - 1, 조건은 j >= -1
-// 4. arr[j]가 arr[i]보다 값이 크다면, arr[i]에 arr[j]를 넣어준다.
-// 4-1. arr[j]가 arr[i]보다 값이 작다면, break를 걸어주고, arr[i]에 temp를 할당한다.
+// 3. 이중 반복문을 실행한다. j는 i - 1, 조건은 j >= 0
+// 4. arr[j]가 현재 temp의 값보다 크다면, j+1 위치에 arr[j]를 할당한다.
+// 4-1. arr[j]가 arr[i]보다 값이 작다면, break를 걸어주고, arr[j+1]에 temp를 할당한다.
 
 // 시간 복잡도 
 // 최악의 경우(정렬이 하나도 안된 경우) : O(n^2)
